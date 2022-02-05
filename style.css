@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background:#43AFFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.main_container{
+    width: 400px;
+    border-radius: 7px;
+    background:#fff;
+    
+}
+.title{
+    color: #43AFFC;
+    font-size: 21px;
+    font-weight: 500;
+    padding: 16px 20px;
+    /* margin-left: 7px; */
+    border-bottom: 1px solid #bfbfbf;
+}
+.user_container{
+    /* display: none; */
+    margin: 20px 25px 30px;
+    padding: 0;
+}
+/* active css  */
+.main_container.active .user_container{
+    display: none;
+}
+.user_container :where(input ,button){
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 18px;
+}
+.info_text{
+    display: none;
+    padding: 12px 10px;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.info_text.error{
+    display: block;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+.info_text.pending{
+    display: block;
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border: 1px solid #bee5ed;
+}
+.input_text{
+    border: 1px solid #bfbfbf;
+    text-align: center;
+}
+.input_text:is(:focus,:valid){
+    border: 2px solid #43AFFC;
+}
+.underline{
+    width: 100%;
+    height: 1px;
+    margin: 25px 0px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.underline::before{
+    content: "or";
+    padding: 0px 15px;
+    font-size: 18px;
+    background-color: #fff;
+    color: rgb(136, 133, 133);
+}
+.btn{
+    color: #fff;
+    background-color: #43AFFC;
+    cursor: pointer;
+}
+
+
+/* ...temp detail container ...  */
+.temp_detail_container{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0px;
+    transition: 1s linear;
+
+}
+.main_container.active .temp_detail_container{
+    display: flex;
+}
+.temprature{
+    margin-bottom:5px;
+}
+.temprature .number{
+    font-size: 60px;
+    font-weight: 600;
+
+}
+.temprature .degree{
+    font-size: 60px;
+    font-weight: 500;
+}
+.weather_details{
+    font-size: 21px;
+    font-weight: 500;
+}
+.location{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.location img{
+    margin-right: 10px;
+}
+.location_name{
+    font-size: 21px;
+    font-weight: 500;
+}
+.icon_container{
+    /* background: rgb(107, 107, 107); */
+    background: #43AFFC;
+    border-radius: 50%;
+}
+.title i{
+    display: none;
+}
+
+.main_container.active .title i{
+    display: inline-block;
+    cursor: pointer;
+}
